@@ -51,19 +51,24 @@ Crie um programa que receberá Salario, Número de Dependetes, Percentual de Imp
     - Acrescentar 10 por dependente ao Salario por Dependente.
 */
 
+import java.util.Scanner;
 
 public class MyClass {
   public static void main(String args[]) {
       
       // VARIAVEIS
       double salario, salarioBruto, salarioLiquido;
-      int dependentes;
       double imposto, valorTotalDependentes, valorImposto;
-      
+      int dependentes;
+      Scanner teclado = new Scanner(System.in);
+         
       //ENTRADAS 
-      salario = 100.00;
-      dependentes = 2;
-      imposto = 10;
+      System.out.print("Digite seu Salario: ");
+      salario = teclado.nextDouble();
+      
+      System.out.print("Digite o núm. dependentes: ");
+      dependentes = teclado.nextInt();
+      imposto = 10;                         // não optei por perguntar volor do imposto
       
       //PROCESSAMENTO
       valorTotalDependentes = (dependentes * 10.00);
