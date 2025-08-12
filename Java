@@ -1,0 +1,42 @@
+// = Comentario em Linha
+/* = Abertura do Comentario em Caixa 
+*/ = Termino do Comentario em Caixa 
+
+
+
+
+
+
+
+
+
+----------------------------------------------------------------------------------------------------------//---------------------------------------------------------------------------------------
+ // EXERCICIO 01 - Crie um programa que calcule a média escolar das notas NP1, NP2 e INTEGRATIVA
+ 
+ import java.util.Scanner; // responsavel por trazer a função de captura de valor
+
+ public class MyClass {
+     public static void main(String args[]){
+
+    // VARIAVEIS
+    double media, nota1, nota2, integrativa;    // double é o tipo primitivo para numeros fracionados, e esta pré atribuindo esse tipo para todas variaveis antes mesmo de receberem valor. 
+    Scanner teclado = new Scanner(System.in);   // Scanner está chamando a função anterior, teclado é o nome da "variavel" 
+    
+    // ENTRADAS
+    System.out.println("Digite a Nota1");    // System.out.println é o famoso print e ln no final é exencial para criar quebra de linha, caso sem, todos prints anteriores se juntam.
+    nota1 = teclado.nextDouble();            // next.double esta dizendo ao sistema que ele esta aguardando um input de tipo primitivo double para continuar.
+    System.out.println("Digite a Nota2");
+    nota2 = teclado.nextDouble();
+    System.out.println("Digite a Integrativa");
+    integrativa = teclado.nextDouble();
+    
+    // PROCESSAMENTO
+    media = (nota1 + nota2 + integrativa) / 3;
+    
+    
+    
+    // SAIDA
+    System.out.println("A media e: " + media);
+         
+     }
+ }
