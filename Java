@@ -40,3 +40,42 @@
          
      }
  }
+
+
+----------------------------------------------------------------------------------------------------------//---------------------------------------------------------------------------------------
+
+
+/*
+Crie um programa que receberá Salario, Número de Dependetes, Percentual de Imposto, o programa devera:
+    - Calcular Salario Liquido deduzindo o valor do imposto.
+    - Acrescentar 10 por dependente ao Salario por Dependente.
+*/
+
+
+public class MyClass {
+  public static void main(String args[]) {
+      
+      // VARIAVEIS
+      double salario, salarioBruto, salarioLiquido;
+      int dependentes;
+      double imposto, valorTotalDependentes, valorImposto;
+      
+      //ENTRADAS 
+      salario = 100.00;
+      dependentes = 2;
+      imposto = 10;
+      
+      //PROCESSAMENTO
+      valorTotalDependentes = (dependentes * 10.00);
+      salarioBruto = salario + valorTotalDependentes;
+      valorImposto = (salarioBruto * imposto) / 100;
+      salarioLiquido = salarioBruto - valorImposto;
+      
+      
+      //SAIDAS
+      
+     System.out.println("Seu Salario Liquido é: " + salarioLiquido);
+      
+
+  }
+}
