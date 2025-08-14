@@ -49,6 +49,51 @@ switch (moedaSelect) {                                                         /
 
   }
 }
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  TERMINAR!!!
+import java.util.Scanner;    // chamando a função de captura do teclado
+
+public class MyClass {
+  public static void main(String args[]) {
+      
+ Scanner teclado = new Scanner(System.in);                       // função de Prompt
+ 
+ double salario, mensalidade, transporteTicket, transporteGasto, dispesaGeral, salarioLiquido;
+ int quantTransDia;
+ 
+ System.out.print("Digite seu salario, R$: ");
+ salario = teclado.nextDouble();
+ 
+ System.out.print("Digite o valor da passagem individual, R$: ");
+ transporteTicket = teclado.nextDouble();
+ 
+ System.out.print("Digite a porcentagem de 0 - 100% que deseja investir em alimentos, R$: ");
+ dispesaGeral = teclado.nextDouble();
+ 
+ System.out.println("Quantas passagens por dia você compra?");
+ quantTransDia = teclado.nextInt();
+ 
+ switch (quantTransDia) {
+     case 0:
+         transporteGasto = (quantTransDia * transporteTicket * 30);
+         System.out.println("Você gasta por mês R$: " + transporteGasto + " com transporte.");
+        break;
+     case 1:
+         transporteGasto = (quantTransDia * transporteTicket * 30);
+         System.out.println("Você gasta por mês R$: " + transporteGasto + " com transporte.");
+        break;
+     case 2:
+         transporteGasto = (quantTransDia * transporteTicket * 30);;
+         System.out.println("Você gasta por mês R$: " + transporteGasto + " com transporte.");
+        break;
+     default:
+     
+        break;
+ }
+ 
+ 
+ 
+ 
+  }
+}
 
 
