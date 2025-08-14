@@ -1,2 +1,54 @@
 Atividades
------------------------------------------------------------------------------------------//----------------------------------------------------------------------------------
+-----------------------------------------------------------------------------------------//----------------------------------------------------------------------------------  Atividade 1 - Q9
+import java.util.Scanner;
+
+public class MyClass {
+  public static void main(String args[]) {
+      
+ Scanner teclado = new Scanner(System.in);                       // função de Prompt
+ 
+ Double dollarUs, euro, rublo;                                 // Variaveis Cotação
+ 
+ Double userReal, converDollarUs, converEuro, converRublo;   // Variaveis Essenciais
+ String moedaSelect;                                        //
+
+
+ dollarUs = 5.39;                                               // Variaveis Cotação Valor
+ euro = 6.32;                                                  //
+ rublo = 0.068;                                               //
+
+
+ System.out.println("Lista de Cambio");
+ System.out.println("USD - EUR - RUBLO");
+ System.out.print("Digite qual das moedas acima, deseja converter: ");
+ moedaSelect = teclado.nextLine();
+ 
+switch (moedaSelect) {                                                         // Estrutura Condicional para determinar qual conversão vai ser feita
+    case "USD":
+        System.out.print("Digite o valor que deseja converter. R$: ") ;
+        userReal = teclado.nextDouble();
+        converDollarUs = (userReal / dollarUs);
+        System.out.print("Você receberá USD: " + converDollarUs);
+        break;
+    case "EUR":
+        System.out.print("Digite o valor que deseja converter. R$: ") ;
+        userReal = teclado.nextDouble();
+        converEuro = (userReal / euro);
+        System.out.print("Você receberá EUR: " + converEuro);
+        break;
+    case "RUBLO":
+        System.out.print("Digite o valor que deseja converter. R$: ") ;
+        userReal = teclado.nextDouble();
+        converRublo = (userReal / rublo);
+        System.out.print("Você receberá Rublos: " + converRublo);
+        break;
+    default:
+        System.out.print("Moeda Incorreta, execute o programa novamente!");
+        break;
+}
+
+  }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+
+
