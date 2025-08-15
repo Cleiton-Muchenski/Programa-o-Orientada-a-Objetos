@@ -49,51 +49,97 @@ switch (moedaSelect) {                                                         /
 
   }
 }
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------  TERMINAR!!!
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ Atividade 1 - Q3
 import java.util.Scanner;    // chamando a função de captura do teclado
+import java.text.DecimalFormat;
+
 
 public class MyClass {
   public static void main(String args[]) {
       
+ // ---------------------------------------------------------------- VARIAVEIS
+      
  Scanner teclado = new Scanner(System.in);                       // função de Prompt
+ DecimalFormat df = new DecimalFormat("#,##0.00");
  
- double salario, mensalidade, transporteTicket, transporteGasto, dispesaGeral, salarioLiquido;
- int quantTransDia;
+ double salario, mensalidade, valorTrans, transporteGasto, dispesaAlimen, salarioLiquido, dispesaAlimenValor, mensalidadeAnual, transporteGastoAnual, dispesaAlimenAnual, gastoTotalAnual, gastoTotalCurso;
+
+ int quantTransDia, aulasPorSemana, aulasTotal, i, tempoCurso;
+ 
+ // ---------------------------------------------------------------- ENTRADA DE VALORES
  
  System.out.print("Digite seu salario, R$: ");
  salario = teclado.nextDouble();
  
+ System.out.print("Digite a mensalidade do curso, R$: ");
+ mensalidade = teclado.nextDouble();
+ 
  System.out.print("Digite o valor da passagem individual, R$: ");
- transporteTicket = teclado.nextDouble();
+ valorTrans = teclado.nextDouble();
  
- System.out.print("Digite a porcentagem de 0 - 100% que deseja investir em alimentos, R$: ");
- dispesaGeral = teclado.nextDouble();
- 
- System.out.println("Quantas passagens por dia você compra?");
+ System.out.print("Quantas passagens por dia você compra? ");
  quantTransDia = teclado.nextInt();
  
- switch (quantTransDia) {
-     case 0:
-         transporteGasto = (quantTransDia * transporteTicket * 30);
-         System.out.println("Você gasta por mês R$: " + transporteGasto + " com transporte.");
-        break;
-     case 1:
-         transporteGasto = (quantTransDia * transporteTicket * 30);
-         System.out.println("Você gasta por mês R$: " + transporteGasto + " com transporte.");
-        break;
-     case 2:
-         transporteGasto = (quantTransDia * transporteTicket * 30);;
-         System.out.println("Você gasta por mês R$: " + transporteGasto + " com transporte.");
-        break;
-     default:
+ System.out.print("Quantas aulas por semana? ");
+ aulasPorSemana = teclado.nextInt();
+ 
+ System.out.print("Qual é o tempo total em anos de curso? ");
+ tempoCurso = teclado.nextInt();
+ 
+ do {
      
-        break;
+ System.out.print("Digite a porcentagem de 0 - 100 que deseja investir em alimentos: ");
+ dispesaAlimen = teclado.nextDouble();
+
+ if (dispesaAlimen < 0 || dispesaAlimen > 100) {
+ System.out.println("Valor incorreto, escolha de 0 - 100 em que deseja investir em alimentos!");
+ 
  }
+     
+ } while (dispesaAlimen < 0 || dispesaAlimen > 100);
+ 
+ // ---------------------------------------------------------------- PROCESSO
+ 
+ aulasTotal = (aulasPorSemana * 4);
+ 
+ transporteGasto = (quantTransDia * valorTrans * aulasTotal);
+ dispesaAlimenValor = (dispesaAlimen * salario) / 100;
+ 
+ salarioLiquido = (salario - transporteGasto - dispesaAlimenValor - mensalidade);
+ 
+ mensalidadeAnual = (mensalidade * 12);
+ transporteGastoAnual = (transporteGasto * 12);
+ dispesaAlimenAnual = (dispesaAlimenValor * 12);
+ gastoTotalAnual = (mensalidadeAnual + transporteGastoAnual + dispesaAlimenAnual);
+ gastoTotalCurso = (gastoTotalAnual * tempoCurso);
  
  
+ // ---------------------------------------------------------------- SAIDA
+  
+ i = 1;
+ do {
+ System.out.println("|");                      // LOOP PARA SEPARAR ENTRADA E SAIDA DO CONSOLE.
+ i++;
+ } while (i <= 10);
  
+ System.out.println("Você gasta por mês R$: " + df.format(transporteGasto) + " com transporte.");
+ System.out.println("Você gasta por mês R$: " + df.format(dispesaAlimenValor) + " com alimentação, isso representa: " + dispesaAlimen + "%");
+ System.out.println("Te sobra R$: " + df.format(salarioLiquido) + " após considerar todos os gastos");
  
+  i = 1;
+ do {
+ System.out.println("|");                      // LOOP PARA SEPARAR ENTRADA E SAIDA DO CONSOLE.
+ i++;
+ } while (i <= 10);
+ 
+ System.out.println("Você gasta por ano R$: " + df.format(mensalidadeAnual) + " com mensalidade.");
+ System.out.println("Você gasta por ano R$: " + df.format(transporteGastoAnual) + " com transporte.");
+ System.out.println("Você gasta por ano R$: " + df.format(dispesaAlimenAnual) + " com alimentação.");
+ System.out.println("Você gasta por ano R$: " + df.format(gastoTotalAnual) + " no total, considerando todos gastos.");
+ System.out.println("Você ira gastar R$: " + df.format(gastoTotalCurso) + " no total, durante todo seu curso.");
+
   }
 }
+
 
 
