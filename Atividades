@@ -181,6 +181,55 @@ System.out.println(unmCelsius + "C° " + "é equivalente a " + unmFahr + "F°" )
 
   }
 }
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ Atividade 1 - Q7
+import java.util.Scanner; // chamando a função para o prompt
+import java.text.DecimalFormat;
+
+public class MyClass {
+  public static void main(String args[]) {
+      
+DecimalFormat df = new DecimalFormat("#,##0.00");    // declarando variavel responsavel pela função de limitação de casas decimais  
+Scanner teclado = new Scanner(System.in);            // declarando variavel responsavel pela função de promp
+double raio, altura, volume;                         // declarando as variaveis.
+
+
+System.out.println("Qual é o raio da lata?");    // entrada de valores
+raio = teclado.nextDouble();
+
+System.out.println("Qual é a altura da lata?");    // entrada de valores
+altura = teclado.nextDouble();
+
+volume = Math.PI * Math.pow(raio, 2) * altura;          // processo de transformação
+
+System.out.println("O volume da lata é: " + df.format(volume) + "ml");  // saida
+
+  }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ Atividade 1 - Q2
+import java.util.Scanner; // chamando a função para o prompt
+
+public class MyClass {
+  public static void main(String args[]) {
+      
+Scanner teclado = new Scanner(System.in);    // declarando variavel responsavel pela função de promp
+int anoNasc, anoAtual, resultado, badNews;                 // declarando as variaveis.
+
+
+System.out.println("Qual é o ano de nascimento?");    // entrada de valores
+anoNasc = teclado.nextInt();
+
+System.out.println("Qual é o ano atual?");    // entrada de valores
+anoAtual = teclado.nextInt();
+
+
+resultado = (anoAtual - anoNasc) * 365; // processo de transformação
+badNews = (27375 - resultado);
+
+System.out.println("Você viveu: " + resultado + " Dias " + "te resta: " + badNews + " Aproveite!.");  // saida
+
+  }
+}
+
 
 
 
