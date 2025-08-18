@@ -229,6 +229,69 @@ System.out.println("Você viveu: " + resultado + " Dias " + "te resta: " + badNe
 
   }
 }
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ Atividade 1 - Q5
+import java.util.Scanner;    // chamando a função de captura do teclado
+import java.text.DecimalFormat;
+
+
+public class MyClass {
+  public static void main(String args[]) {
+      
+ // ---------------------------------------------------------------- VARIAVEIS
+      
+ Scanner teclado = new Scanner(System.in);                       // função de Prompt
+ DecimalFormat df = new DecimalFormat("R$#,##0.00");
+ 
+ double salarioHora, salarioMens, salarioBruto, salarioLiquido, auxCusto, inss, ir;
+ int aulaSemanais, i;
+ String nomeProf;
+ 
+ // ---------------------------------------------------------------- ENTRADA DE VALOR
+ 
+ salarioHora = 25.00;
+ 
+ System.out.print("Qual o nome do professor? :");
+ nomeProf = teclado.nextLine();
+ 
+ System.out.print("Quantas aulas por semana o professor leciona? :");
+ aulaSemanais = teclado.nextInt();
+ 
+ // --------------------------------------------------------------- PROCESSO 
+ 
+ salarioMens = (aulaSemanais * 4) * salarioHora;
+ auxCusto = (10 * salarioMens) / 100;                           // Auxilio de custo de 10%
+ salarioBruto = salarioMens + auxCusto;
+
+ inss = (7 * salarioBruto) / 100;                               // Desconto INSS 7%
+ ir = (5 * salarioBruto) / 100;                                 // Desconto IR 5%
+ salarioLiquido = salarioBruto - (inss + ir);
+
+ // --------------------------------------------------------------- Saida
+ 
+ i = 1;
+ do {
+     System.out.println(":");
+     i++;
+ } while (i <= 10);
+
+ System.out.println("____________________Resumo_Folha_Pagamento____________________");
+ System.out.println("|" + "Professor: " + nomeProf);
+ System.out.println("|");
+ System.out.println("|" + "Salario Mensal: " + df.format(salarioMens));
+ System.out.println("|" + "Auxilio de Custo: " + df.format(auxCusto));
+ System.out.println("|" + "Salario bruto total: " + df.format(salarioBruto));
+ System.out.println("|");
+ System.out.println("|_________________________Descontos___________________________");
+ System.out.println("|");
+ System.out.println("|" + "INSS: " + df.format(inss));
+ System.out.println("|" + "IR: " + df.format(ir));
+ System.out.println("|");
+ System.out.println("|" + "Salario Liquido: " + df.format(salarioLiquido));
+ System.out.println("|");
+ System.out.println("|_____________________________________________________________");
+
+  }
+}
 
 
 
