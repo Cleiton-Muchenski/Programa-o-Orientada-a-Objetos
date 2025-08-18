@@ -112,8 +112,28 @@ public class Main {
 	 } else {
 	     System.out.println("Sua media foi " + media + " REPROVADO");
 	 }
-	    
+	}
+}
+----------------------------------------------------------------------------------------------------------//---------------------------------------------------------------------------------------
+/**********************************************************************************************
+ Crie uma aplicação que receba o peso das pessoas dentro do elevador, e caso o peso seja 
+ superior a 500kg deverá exibir uma mensagem de alerta e bloquear o elevador
+**********************************************************************************************/
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+
+double peso = 0.00;
+
+peso = 450.00;
+
+if (peso >= 500.00) {
+    System.out.println("ALERTA :: PESO MÁXIMO ATINGIDO!! ::");
+}
 	    
 		
 	}
 }
+
