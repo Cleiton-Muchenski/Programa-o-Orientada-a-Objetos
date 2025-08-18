@@ -136,4 +136,44 @@ if (peso >= 500.00) {
 		
 	}
 }
+----------------------------------------------------------------------------------------------------------//---------------------------------------------------------------------------------------
+/**********************************************************************************************
+ Crie uma aplicação que devera calcular a media escolar simples de duas notas de um detrminado
+ aluno, caso a media seja entre 0 e 4.99, exiba a mensagem reprovado, se a media for entre 
+ 5.00 e 6.00 exiba recuperação, e acima de 6.00 exibado aprovado
+**********************************************************************************************/
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+	   
+	 Scanner prompt = new Scanner(System.in); // Variaveis
+	 double nota1, nota2, media = 0.00;
+	 
+	 
+	 System.out.print("Digite a nota 1: ");  // Entrada de valores
+	 nota1 = prompt.nextDouble();
+	 
+	 System.out.print("Digite a nota 2: ");
+	 nota2 = prompt.nextDouble();
+	 
+	 media = (nota1 + nota2) / 2;  // Processo
+	 
+	 if (media < 5.0) {                                               // estrutura de condição para saidas.
+	     System.out.println("Sua media foi " + media + " REPROVADO");
+	 } 
+	 else
+	 {
+	 if (media >= 6) {
+	     System.out.println("Sua media foi " + media + " APROVADO");
+	 } 
+	 else 
+	 {
+	     System.out.println("Sua media foi " + media + " RECUPERAÇÃO");
+	         }
+	     }
+	 
+	}
+}
 
