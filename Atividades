@@ -140,6 +140,29 @@ public class MyClass {
 
   }
 }
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------------ Atividade 1 - Q4
+import java.util.Scanner; // chamando a função para o prompt
+
+public class MyClass {
+  public static void main(String args[]) {
+      
+      
+Scanner teclado = new Scanner(System.in); // declarando variavel responsavel pela função de promp
+double raio, areaCirculo;                 // declarando as variaveis.
+
+
+System.out.println("Qual é o raio do circulo?");    // entrada de valores
+raio = teclado.nextDouble();
+
+areaCirculo = Math.PI * Math.pow(raio, 2);          // processo de transformação
+
+System.out.println("A area do circulo é: " + areaCirculo);  // saida
+
+  }
+}
+
+
+
 
 
 
