@@ -84,3 +84,36 @@ public class MyClass {
 
   }
 }
+----------------------------------------------------------------------------------------------------------//---------------------------------------------------------------------------------------
+/**********************************************************************************************
+ Crie uma aplicação que receba nota1 e nota2, calcule a media, e exiba Aprovado (media >= 6.0)
+ ou Reprovado (media < 6.0)
+**********************************************************************************************/
+
+import java.util.Scanner;
+
+public class Main {
+	public static void main(String[] args) {
+	   
+	 Scanner prompt = new Scanner(System.in); // Variaveis
+	 double nota1, nota2, media;
+	 
+	 
+	 System.out.print("Digite a nota 1: ");  // Entrada de valores
+	 nota1 = prompt.nextDouble();
+	 
+	 System.out.print("Digite a nota 2: ");
+	 nota2 = prompt.nextDouble();
+	 
+	 media = (nota1 + nota2) / 2;  // Processo
+	 
+	 if (media >= 6.0) {                                               // estrutura de condição para saidas.
+	     System.out.println("Sua media foi " + media + " APROVADO");
+	 } else {
+	     System.out.println("Sua media foi " + media + " REPROVADO");
+	 }
+	    
+	    
+		
+	}
+}
