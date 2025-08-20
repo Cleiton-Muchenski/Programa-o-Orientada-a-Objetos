@@ -47,3 +47,84 @@ if (num1 <= 0){
 }
 	}
 }
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q3
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main
+{
+	public static void main(String[] args) {
+
+DecimalFormat df = new DecimalFormat(" #,###.##"); // variaveis
+Scanner prompt = new Scanner(System.in); 
+
+System.out.print("Digite a Nota 1: "); // entrada de variaveis
+Double n1 = prompt.nextDouble();
+System.out.print("Digite a Nota 2: ");
+Double n2 = prompt.nextDouble();
+System.out.print("Digite a Nota 3: ");
+Double n3 = prompt.nextDouble();
+
+// calculo media
+Double media = (n1 + n2 + n3) / 3;
+
+// estrutura condicional que faz a conta da diferença de um numero e outro e decide qual e maior
+if (media >= 5){
+    System.out.println("Resultado ::APROVADO:: sua média foi: " + df.format(media) );
+} else {
+    System.out.println("Resultado ::REPROVADO:: sua média foi: " + df.format(media) + " Media necessaria maior ou igual a ::5:: ");
+}
+
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q4
+//--------------------------------------------------------------Imports
+import java.util.Scanner;
+import java.text.DecimalFormat;
+//--------------------------------------------------------------
+public class Main
+{
+	public static void main(String[] args) {
+
+//--------------------------------------------------------------Varieaveis
+DecimalFormat df = new DecimalFormat("#,###.##");      
+Scanner prompt = new Scanner(System.in); 
+Double n1,n2,media,mediaNova,nExame;
+//--------------------------------------------------------------Entrada Val
+do {
+System.out.print("Digite a Nota 1: "); // entrada de variaveis
+n1 = prompt.nextDouble();
+System.out.print("Digite a Nota 2: ");
+n2 = prompt.nextDouble();
+if (n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10 ){
+    System.out.println("Nota inserida invalida, senhas devem ser entre 0 e 10");
+    }
+} while (n1 < 0 || n1 > 10 || n2 < 0 || n2 > 10 );
+//--------------------------------------------------------------Processo Media base
+media = (n1 + n2) / 2;
+//--------------------------------------------------------------Saida Com Estrutura Condicional
+if (media >= 7){
+    System.out.println("Resultado ::APROVADO:: sua média foi: " + df.format(media) + " média minima necessaria ::7:: ");
+} else { 
+    System.out.print("Média: " + df.format(media) + " insuficiente...  Digite a nota do Exame para re-avaliação: ");
+    //--------------------------------------------------------------Calculo de Media Nova com Loop para numeros Invalidos
+    do{
+    nExame = prompt.nextDouble();
+    if (nExame < 0 || nExame > 10) {
+        System.out.println("Nota inserida invalida, senhas devem ser entre 0 e 10");
+        }
+    } while (nExame < 0 || nExame > 10);
+    mediaNova = (n1 + n2 + nExame) / 3;
+    //---------------------------------------------------------------------------------------------------------------------
+    if (mediaNova >= 5){
+        System.out.println("Resultado ::APROVADO:: sua média foi: " + df.format(mediaNova) + " média minima necessaria ::5:: (OBS: media diferente caso Exame Seja feito.) ");
+    } else {
+        System.out.println("Resultado ::REPROVADO:: sua média foi: " + df.format(mediaNova) + " média minima necessaria ::5:: (OBS: media diferente caso Exame Seja feito.) ");
+    }
+}
+
+prompt.close();
+
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q5
