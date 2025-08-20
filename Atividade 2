@@ -1,0 +1,49 @@
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q1
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+
+Scanner prompt = new Scanner(System.in); // variaveis
+int difnum = 0;
+
+
+System.out.print("Digite o numero A: "); // entrada de variaveis
+int num1 = prompt.nextInt();
+System.out.print("Digite o numero B: ");
+int num2 = prompt.nextInt();
+
+// estrutura condicional que faz a conta da diferença de um numero e outro e decide qual e maior
+if (num1 > num2){
+    difnum = num1 - num2;
+    System.out.println("O numero A é maior que B, com uma diferença de: " + difnum );
+} else {
+    difnum = num1 - num2;
+    System.out.println("O numero B é maior que A, com uma diferença de: " + difnum );
+}
+
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q2
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+
+Scanner prompt = new Scanner(System.in); // variaveis
+
+System.out.print("Digite o numero X: "); // entrada de variaveis
+int num1 = prompt.nextInt();
+
+
+// estrutura condicional que faz a conta da diferença de um numero e outro e decide qual e maior
+if (num1 <= 0){
+    int result = num1 * -1;
+    System.out.println("O numero inserido foi: " + num1 + " e foi convertido para positivo: " + result );
+} else {
+    System.out.println("O numero inserido é positivo sem mudanças necessarias : " + num1 );
+}
+	}
+}
