@@ -164,4 +164,34 @@ if (delta < 0){
      }
   }
 }
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q6
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q6 FAZENDO
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main
+{
+	public static void main(String[] args) {
+
+//----------------------------------------------------------------VARIAVEIS
+DecimalFormat df = new DecimalFormat("#,###.####");
+Scanner prompt = new Scanner(System.in);
+double n1,n2,n3,n1resu,n2resu,n3resu,n4resu;
+String statTrue = "DIVISIVEL";
+String statFalse = "INDIVISIVEL";
+
+//----------------------------------------------------------------ENTRADA DE VAL
+System.out.print("Digite numero A: ");
+n1 = prompt.nextDouble();
+System.out.print("Digite numero B: ");
+n2 = prompt.nextDouble();
+System.out.print("Digite numero C: ");
+n3 = prompt.previousDouble();
+System.out.print("Digite numero D: ");
+n4 = prompt.previousDouble();
+//----------------------------------------------------------------PROCESSO
+n1resu = (n1 % 2)
+n2resu
+n3resu
+n4resu
+  }
+}
