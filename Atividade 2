@@ -128,3 +128,40 @@ prompt.close();
 	}
 }
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q5
+import java.util.Scanner;
+import java.text.DecimalFormat;
+
+public class Main
+{
+	public static void main(String[] args) {
+
+//----------------------------------------------------------------VARIAVEIS
+DecimalFormat df = new DecimalFormat("#,###.####");
+Scanner prompt = new Scanner(System.in);
+double a,b,c,delta;
+//----------------------------------------------------------------ENTRADA DE VAL
+System.out.print("Digite numero A: ");
+a = prompt.nextDouble();
+System.out.print("Digite numero B: ");
+b = prompt.nextDouble();
+System.out.print("Digite numero C: ");
+c = prompt.nextDouble();
+
+//----------------------------------------------------------------PROCESSO / SAIDA
+delta = Math.pow(b, 2) - (4 * a * c);              // CAL DELTA
+System.out.println("Valor de delta: " + delta);
+	
+	
+if (delta < 0){
+    System.out.println("Não existem raizes reais.");
+} else if (delta > 0){
+    double raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+    double raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
+    System.out.println("As raizes reais são: " + df.format(raiz1) + " e " + df.format(raiz2) );
+} else {
+    double raiz1 = (-b / (2 * a) );
+    System.out.println("Há uma Raiz real: " + df.format(raiz1) );
+     }
+  }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q6
