@@ -197,7 +197,7 @@ if (n2 % 2 == 0) {
     System.out.println("O Numero: " + n2 + " é divisivel por 2");
 } if (n2 % 3 == 0) {
     System.out.println("O Numero: " + n2 + " é divisivel por 3");
-}
+} 
 if (n3 % 2 == 0) {
     System.out.println("O Numero: " + n3 + " é divisivel por 2");
 } if (n3 % 3 == 0) {
@@ -209,7 +209,7 @@ if (n4 % 2 == 0) {
     System.out.println("O Numero: " + n4 + " é divisivel por 3");
 }
 
-System.out.println("::::Observação::::");
+System.out.println("::::::::::!Observação!::::::::::");
 System.out.println("Se o resultado dos outros numeros não sairam, considere-os não divisiveis");
 
   }
