@@ -287,6 +287,53 @@ if (n4 % 2 == 0) {
 
   }
 }
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q8
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+
+//----------------------------------------------------------------VARIAVEIS
+Scanner prompt = new Scanner(System.in);
+int n1,n2,n3,n4,n5,maior,menor;
+
+
+//----------------------------------------------------------------ENTRADA DE VAL
+System.out.print("Digite numero A: ");
+n1 = prompt.nextInt();
+
+System.out.print("Digite numero B: ");
+n2 = prompt.nextInt();
+
+System.out.print("Digite numero C: ");
+n3 = prompt.nextInt();
+
+System.out.print("Digite numero D: ");
+n4 = prompt.nextInt();
+
+System.out.print("Digite numero E: ");
+n5 = prompt.nextInt();
+//----------------------------------------------------------------PROCESSO e SAIDA
+
+maior = n1;
+menor = n1; 
+
+if (n2 > maior) maior = n2;
+if (n3 > maior) maior = n3;
+if (n4 > maior) maior = n4;
+if (n5 > maior) maior = n5;
+
+if (n2 < menor) menor = n2;
+if (n3 < menor) menor = n3;
+if (n4 < menor) menor = n4;
+if (n5 < menor) menor = n5;
+
+System.out.println("O maior número é: " + maior );
+System.out.println("O menor número é: " + menor );
+
+  }
+}
 ------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q9
 import java.util.Scanner;
 
