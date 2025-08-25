@@ -164,7 +164,59 @@ if (delta < 0){
      }
   }
 }
-------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q6 FAZENDO !!!!
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q6
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+
+//----------------------------------------------------------------VARIAVEIS
+Scanner prompt = new Scanner(System.in);
+int n1,n2,n3,n4;
+
+//----------------------------------------------------------------ENTRADA DE VAL
+System.out.print("Digite numero A: ");
+n1 = prompt.nextInt();
+
+System.out.print("Digite numero B: ");
+n2 = prompt.nextInt();
+
+System.out.print("Digite numero C: ");
+n3 = prompt.nextInt();
+
+System.out.print("Digite numero D: ");
+n4 = prompt.nextInt();
+//----------------------------------------------------------------PROCESSO e SAIDA
+
+// ------------------------------- N1
+if (n1 % 2 == 0 && n1 % 3 == 0) {
+    System.out.println("O numero: " + n1 + " é divisivel por 2 e 3!.");
+} else {
+    System.out.println("O numero: " + n1 + " ::!Não!:: é divisivel por 2 e 3.");
+}
+// ------------------------------- N2
+if (n2 % 2 == 0 && n2 % 3 == 0) {
+    System.out.println("O numero: " + n2 + " é divisivel por 2 e 3!.");
+} else {
+    System.out.println("O numero: " + n2 + " ::!Não!:: é divisivel por 2 e 3.");
+}
+// ------------------------------- N3
+if (n3 % 2 == 0 && n3 % 3 == 0) {
+    System.out.println("O numero: " + n3 + " é divisivel por 2 e 3!.");
+} else {
+    System.out.println("O numero: " + n3 + " ::!Não!:: é divisivel por 2 e 3.");
+}
+// ------------------------------- N4
+if (n4 % 2 == 0 && n4 % 3 == 0) {
+    System.out.println("O numero: " + n4 + " é divisivel por 2 e 3!.");
+} else {
+    System.out.println("O numero: " + n4 + " ::!Não!:: é divisivel por 2 e 3.");
+}
+
+  }
+}
+------------------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE - Q7
 import java.util.Scanner;
 
 public class Main
@@ -192,46 +244,47 @@ n4 = prompt.nextInt();
 
 // ------------------------------- N1
 if (n1 % 2 == 0 || n1 % 3 == 0) {
-    System.out.println("O Numero: " + n1 + " ");
+    System.out.print("O Numero: " + n1 + " ");
 } 
 if (n1 % 2 == 0) {
-    System.out.print("é divisivel por 2 ");
+    System.out.print("é divisivel por 2. ");
 } if (n1 % 3 == 0) {
-    System.out.print("é divisivel por 3 ");
+    System.out.print("é divisivel por 3. ");
 }
 
-
+ System.out.println("");
 // ------------------------------- N2
 if (n2 % 2 == 0 || n2 % 3 == 0) {
-    System.out.println("O Numero: " + n2 + " ");
+    System.out.print("O Numero: " + n2 + " ");
 } 
 if (n2 % 2 == 0) {
-    System.out.print("é divisivel por 2 ");
+    System.out.print("é divisivel por 2. ");
 } if (n2 % 3 == 0) {
-    System.out.print("é divisivel por 3 ");
+    System.out.print("é divisivel por 3. ");
 }
 
-
+System.out.println("");
 // ------------------------------- N3
 if (n3 % 2 == 0 || n2 % 3 == 0) {
-    System.out.println("O Numero: " + n3 + " ");
+    System.out.print("O Numero: " + n3 + " ");
 }
 if (n3 % 2 == 0) {
-    System.out.print("é divisivel por 2 ");
+    System.out.print("é divisivel por 2. ");
 } if (n3 % 3 == 0) {
-    System.out.print("é divisivel por 3 ");
+    System.out.print("é divisivel por 3. ");
 }
 
-
+System.out.println("");
 // ------------------------------- N4
 if (n4 % 2 == 0 || n4 % 3 == 0) {
-    System.out.println("O Numero: " + n4 + " ");
+    System.out.print("O Numero: " + n4 + " ");
 } 
 if (n4 % 2 == 0) {
-    System.out.print("é divisivel por 2 ");
+    System.out.print("é divisivel por 2. ");
 } if (n4 % 3 == 0) {
-    System.out.print("é divisivel por 3 ");
+    System.out.print("é divisivel por 3. ");
 }
 
   }
 }
+
