@@ -1,18 +1,146 @@
 ------------------------------------------------------------------------------------------------------------------------------------------- Atividade 3 - Q1
-import java.util.Scanner;
+import  java.util.Scanner;
 
 public class Main
 {
 	public static void main(String[] args) {
-	    int numero;
-	    Scanner prompt = new Scanner(System.in);
-	    
-	    numero = prompt.nextInt();
-	    
-	    if (!(numero > 3)){
-	        System.out.println("O numero: " + numero + " não é maior que 3");
-	    }
-	    
+        Scanner scanner = new Scanner(System.in);
+
+        // Leitura dos cinco valores inteiros
+        System.out.print("Digite o primeiro valor: ");
+        int valor1 = scanner.nextInt();
+
+        System.out.print("Digite o segundo valor: ");
+        int valor2 = scanner.nextInt();
+
+        System.out.print("Digite o terceiro valor: ");
+        int valor3 = scanner.nextInt();
+
+        System.out.print("Digite o quarto valor: ");
+        int valor4 = scanner.nextInt();
+
+        System.out.print("Digite o quinto valor: ");
+        int valor5 = scanner.nextInt();
+
+        // inicializando maior e menor valor com o primeiro valor
+        int maior = valor1;
+        int menor = valor1;
+
+        // comparando cada valor para encontrar o maior e o menor
+        if (valor2 > maior) {
+            maior = valor2;
+        }
+        if (valor2 < menor) {
+            menor = valor2;
+        }
+
+        if (valor3 > maior) {
+            maior = valor3;
+        }
+        if (valor3 < menor) {
+            menor = valor3;
+        }
+
+        if (valor4 > maior) {
+            maior = valor4;
+        }
+        if (valor4 < menor) {
+            menor = valor4;
+        }
+
+        if (valor5 > maior) {
+            maior = valor5;
+        }
+        if (valor5 < menor) {
+            menor = valor5;
+        }
+
+        // Exibindo o maior e o menor valor
+        System.out.println("O maior valor é: " + maior);
+        System.out.println("O menor valor é: " + menor);
 	}
 }
-------------------------------------------------------------------------------------------------------------------------------------------
+------------------------------------------------------------------------------------------------------------------------------------------- Atividade 3 - Q2
+import  java.util.Scanner;
+import  java.util.Arrays;
+
+public class Main
+{
+	public static void main(String[] args) {
+   Scanner scanner = new Scanner(System.in);
+
+        int[] valores = new int[3];
+        
+
+        for (int i = 0 ; i < 3 ; i++ ) {
+        System.out.print("Digite o primeiro valor: ");
+        valores[i] = scanner.nextInt();
+    }
+
+        // Ordenar o array em ordem crescente
+        Arrays.sort(valores);
+
+        System.out.println("Valores ordenados em ordem crescente:");
+        System.out.println(valores[0] + ", " + valores[1] + ", " + valores[2]);
+        
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------- Atividade 3 - Q3
+import  java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+   Scanner prompt = new Scanner(System.in);
+   
+   int valor1, valor2;
+   
+   System.out.println("Insira o valor 1");
+   valor1 = prompt.nextInt();
+   
+   System.out.println("Insira o valor 2");
+   valor2 = prompt.nextInt();
+   
+   
+   
+   if (valor1 != valor2) {
+       if (valor1 > valor2) {
+           System.out.println("Valor 1 é maior: " + valor1 );
+       } else {
+           System.out.println("Valor 2 é maior: " + valor2 );
+       }
+   } else {
+       System.out.println("Valores inseridos não podem ser iguais.");
+   }
+   
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------- Atividade 3 - Q4
+import  java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+   Scanner prompt = new Scanner(System.in);
+   
+   int idade;
+   
+   System.out.println("Insira sua idade:");
+   idade = prompt.nextInt();
+   
+  
+   if (idade >= 0 && idade <= 10) {
+       System.out.println("Olá criança");
+   } else if (idade >= 11 && idade <= 14) {
+      System.out.println("Olá, você é um pré-adolescente");
+   } else if (idade >= 15 && idade <= 18) {
+       System.out.println("Parabéns, você já pode ser um eleitor");
+   } else if (idade >= 19 && idade <= 21) {
+       System.out.println("Hummm, você já é um adulto");
+   } else if (idade > 21) {
+       System.out.println("Bem, agora já esta na hora de sair de casa e seguir a sua vida...");
+   }
+  
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------- Atividade 3 - Q5
