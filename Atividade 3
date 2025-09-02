@@ -180,3 +180,92 @@ public class Main
 	}
 }
 ------------------------------------------------------------------------------------------------------------------------------------------- Atividade 3 - Q5
+import java.util.Scanner;
+
+public class Main
+{
+	public static void main(String[] args) {
+	    Scanner prompt = new Scanner(System.in);
+	    double n1,n2,t1,media;
+	    
+	    System.out.println("Insira a nota 1");
+	    n1 = prompt.nextDouble();
+	    
+	    System.out.println("Insira a nota 2");
+	    n2 = prompt.nextDouble();
+	    
+	    System.out.println("Insira a nota do trabalho 1");
+	    t1 = prompt.nextDouble();
+	    
+	    System.out.println("n1: " + n1 + ", n2: " + n2 + ", t1: " + t1);
+	    
+	    n1 = n1 * 0.3;
+	    n2 = n2 * 0.4;
+	    t1 = t1 * 0.3;
+	   
+	    media = n1 + n2 + t1;
+	  
+	   System.out.println("media final: " + media);
+	   
+	      if (media >= 0 && media <= 4.99) {
+            System.out.println("Reprovado");
+        } else if (media >= 5.00 && media <= 7.49) {
+            System.out.println("Aprovado");
+        } else if (media >= 7.50) {
+            System.out.println("Parabéns, você foi aprovado com excelência");
+        }
+	   
+	}
+}
+------------------------------------------------------------------------------------------------------------------------------------------- Atividade 3 - Q6
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner prompt = new Scanner(System.in);
+        
+        // Solicitar os três valores
+        System.out.println("Insira o primeiro valor:");
+        int v1 = prompt.nextInt();
+        
+        System.out.println("Insira o segundo valor:");
+        int v2 = prompt.nextInt();
+        
+        // Verificar se o segundo valor é igual ao primeiro
+        while (v2 == v1) {
+            System.out.println("Valor repetido! Insira um valor diferente:");
+            v2 = prompt.nextInt();
+        }
+
+        System.out.println("Insira o terceiro valor:");
+        int v3 = prompt.nextInt();
+        
+        // Verificar se o terceiro valor é igual a algum dos dois anteriores
+        while (v3 == v1 || v3 == v2) {
+            System.out.println("Valor repetido! Insira um valor diferente:");
+            v3 = prompt.nextInt();
+        }
+
+
+        if (v1 < v2 && v1 < v3) {
+            if (v2 < v3) {
+                System.out.println("Valores em ordem crescente: " + v1 + ", " + v2 + ", " + v3);
+            } else {
+                System.out.println("Valores em ordem crescente: " + v1 + ", " + v3 + ", " + v2);
+            }
+        } else if (v2 < v1 && v2 < v3) {
+            if (v1 < v3) {
+                System.out.println("Valores em ordem crescente: " + v2 + ", " + v1 + ", " + v3);
+            } else {
+                System.out.println("Valores em ordem crescente: " + v2 + ", " + v3 + ", " + v1);
+            }
+        } else {
+            if (v1 < v2) {
+                System.out.println("Valores em ordem crescente: " + v3 + ", " + v1 + ", " + v2);
+            } else {
+                System.out.println("Valores em ordem crescente: " + v3 + ", " + v2 + ", " + v1);
+            }
+        }
+    }
+}
+
