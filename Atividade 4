@@ -1,4 +1,14 @@
 ------------------------------------------------------------------------------------------------------------------------------------- AT4 - Q1
+public class Main
+{
+	public static void main(String[] args) {
+	
+	for(int i = 15; i <= 50 ; i++) {
+	    System.out.println(i + "² = " + (i * i));
+	    
+	    }
+	}
+}
 ------------------------------------------------------------------------------------------------------------------------------------- AT4 - Q2
 import java.util.Scanner;
 
@@ -19,7 +29,39 @@ public class Main
 }
 
 ------------------------------------------------------------------------------------------------------------------------------------- AT4 - Q3
+public class Main
+{
+	public static void main(String[] args) {
+	
+	int i;
+	int temp = 0;
+	
+	for( i = 1; i <= 100 ; i++) {
+	   temp += i;
+	   System.out.println(i);
+	    }
+	    
+	    System.out.println("Somando tudo " + temp);
+	}
+}
 ------------------------------------------------------------------------------------------------------------------------------------- AT4 - Q4
+public class Main
+{
+	public static void main(String[] args) {
+	
+	int i;
+	int temp = 0;
+	
+	for( i = 1; i <= 500 ; i++) {
+	  if (i % 2 == 0) {
+	  temp += i;}
+	  System.out.println(i);
+	  }
+	    
+	    System.out.println("Somando tudo " + temp);
+	    
+	}
+}
 ------------------------------------------------------------------------------------------------------------------------------------- AT4 - Q5
 public class Main
 {
@@ -61,6 +103,52 @@ public class Main
 	}
 }
 ------------------------------------------------------------------------------------------------------------------------------------- AT4 - Q8
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        // Solicita a base
+        System.out.print("Digite o valor da base: ");
+        int base = scanner.nextInt();
+        
+        // Solicita o expoente
+        System.out.print("Digite o valor do expoente: ");
+        int expoente = scanner.nextInt();
+        
+        int resultado = 1;
+        
+        // Calcula a potência usando um loop
+        for (int i = 1; i <= expoente; i++) {
+            resultado *= base; // equivalente a resultado = resultado * base
+        }
+        
+        System.out.println(base + " elevado a " + expoente + " = " + resultado);
+        
+        scanner.close();
+    }
+}
 ------------------------------------------------------------------------------------------------------------------------------------- AT4 - Q9
+import java.util.Scanner;
+
+public class Main {
+    public static void main(String[] args) {
+        Scanner scanner = new Scanner(System.in);
+        
+        System.out.print("Digite o numero fatorial: ");
+        int fatorial = scanner.nextInt();
+        
+        int resultado = 1;
+        
+        
+        for (int i = fatorial; i >= 1; i--) {
+            resultado *= i; 
+        }
+        
+        System.out.println(fatorial + "! = " + resultado);
+    
+     }
+}
 ------------------------------------------------------------------------------------------------------------------------------------- AT4 - Q10
 
