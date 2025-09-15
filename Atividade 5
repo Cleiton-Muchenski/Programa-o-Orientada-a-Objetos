@@ -34,4 +34,23 @@ public class Main
         }
 	}
 }
+------------------------------------------------------------------------------------------------------------------------------------------------------------- ATIVIDADE 5 - Q3
+public class Main
+{
+	public static void main(String[] args) {
+	    
+	    long totalGraos = 0;
+	    long anterior = 1;
+	        System.out.println("Quadrado\tN°Grãos");
+	        System.out.println("1°\t" + 1);
+	    
+	    for (int i = 2; i <= 64; i++) {
+	        totalGraos += anterior;
+	        anterior *= 2;
+	        System.out.println(i+"°\t" + anterior);
+	    }
+	    System.out.println("Total: " + totalGraos);
 
+
+	}
+}
